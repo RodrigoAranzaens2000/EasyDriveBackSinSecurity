@@ -30,7 +30,7 @@ public class CentrosMedicos {
         Direccion = direccion;
         NumeroTelefono = numeroTelefono;
     }
-
+/**/
     public int getIDCentro() {
         return IDCentro;
     }
