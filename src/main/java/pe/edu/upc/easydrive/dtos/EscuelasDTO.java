@@ -1,5 +1,6 @@
 package pe.edu.upc.easydrive.dtos;
 
+import jakarta.persistence.Column;
 import pe.edu.upc.easydrive.entities.Promocion;
 
 public class EscuelasDTO {
@@ -7,6 +8,8 @@ public class EscuelasDTO {
     private String nombre;
     private Long Ruc;
     private Promocion prom;
+    private String Direccion;
+    private String NumeroTelefono;
 
     public int getIDEscuela() {
         return IDEscuela;
@@ -38,5 +41,21 @@ public class EscuelasDTO {
 
     public void setProm(Promocion prom) {
         this.prom = prom;
+    }
+
+    public String getDireccion() {
+        return Direccion;
+    }
+
+    public void setDireccion(String direccion) {
+        Direccion = direccion;
+    }
+
+    public String getNumeroTelefono() {
+        return NumeroTelefono;
+    }
+
+    public void setNumeroTelefono(String numeroTelefono) {
+        NumeroTelefono = numeroTelefono;
     }
 }

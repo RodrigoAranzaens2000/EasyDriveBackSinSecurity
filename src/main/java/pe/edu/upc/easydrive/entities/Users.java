@@ -25,8 +25,12 @@ public class Users implements Serializable {
     private String ApellidoMaterno;
     @Column(name = "Correo" , nullable = false , length = 60)
     private String Correo;
-        @Column(name = "fotoPerfil" , nullable = true , length = 500)
+    @Column(name = "fotoPerfil" , nullable = true , length = 500)
     private String fotoPerfil;
+    @Column(name = "Direccion" , nullable = false , length = 500)
+    private String Direccion;
+    @Column(name = "NumeroTelefono" , nullable = false , length = 30)
+    private String NumeroTelefono;
     @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     @JoinColumn(name = "user_id")
     private List<Role> roles;
@@ -110,5 +114,21 @@ public class Users implements Serializable {
 
     public void setFotoPerfil(String fotoPerfil) {
         this.fotoPerfil = fotoPerfil;
+    }
+
+    public String getNumeroTelefono() {
+        return NumeroTelefono;
+    }
+
+    public void setNumeroTelefono(String numeroTelefono) {
+        NumeroTelefono = numeroTelefono;
+    }
+
+    public String getDireccion() {
+        return Direccion;
+    }
+
+    public void setDireccion(String direccion) {
+        Direccion = direccion;
     }
 }

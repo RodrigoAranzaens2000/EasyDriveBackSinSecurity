@@ -1,5 +1,7 @@
 package pe.edu.upc.easydrive.dtos;
 
+import jakarta.persistence.Column;
+
 public class UserDTO {
     private Long id;
     private String username;
@@ -10,6 +12,8 @@ public class UserDTO {
     private String ApellidoMaterno;
     private String Correo;
     private String fotoPerfil;
+    private String Direccion;
+    private String NumeroTelefono;
 
     public Long getId() {
         return id;
@@ -81,5 +85,21 @@ public class UserDTO {
 
     public void setFotoPerfil(String fotoPerfil) {
         this.fotoPerfil = fotoPerfil;
+    }
+
+    public String getDireccion() {
+        return Direccion;
+    }
+
+    public void setDireccion(String direccion) {
+        Direccion = direccion;
+    }
+
+    public String getNumeroTelefono() {
+        return NumeroTelefono;
+    }
+
+    public void setNumeroTelefono(String numeroTelefono) {
+        NumeroTelefono = numeroTelefono;
     }
 }
