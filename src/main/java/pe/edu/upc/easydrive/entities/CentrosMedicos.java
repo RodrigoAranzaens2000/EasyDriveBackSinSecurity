@@ -18,7 +18,7 @@ public class CentrosMedicos {
     private String Direccion;
     @Column(name = "NumeroTelefono" , nullable = false , length = 30)
     private String NumeroTelefono;
-
+/**/
     public CentrosMedicos() {
     }
 
