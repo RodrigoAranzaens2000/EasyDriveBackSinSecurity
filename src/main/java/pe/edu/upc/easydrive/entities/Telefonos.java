@@ -12,7 +12,7 @@ public class Telefonos {
     private String TipoDeTelefono;
     @Column(name = "NumeroTelefono" , nullable = false , length = 50)
     private String NumeroTelefono;
-    @Column(name = "AnexoEscuelas" , nullable = false , length = 50)
+    @Column(name = "AnexoEscuelas" , length = 50)
     private String AnexoEscuelas;
     @ManyToOne
     @JoinColumn(name = "IDUsuario")
