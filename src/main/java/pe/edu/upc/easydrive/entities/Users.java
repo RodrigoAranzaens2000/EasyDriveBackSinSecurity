@@ -1,5 +1,7 @@
 package pe.edu.upc.easydrive.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 
 import java.io.Serializable;
@@ -31,6 +33,7 @@ public class Users implements Serializable {
     private String Direccion;
     @Column(name = "NumeroTelefono" , nullable = false , length = 30)
     private String NumeroTelefono;
+    @JsonIgnore
     @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     @JoinColumn(name = "user_id")
     private List<Role> roles;

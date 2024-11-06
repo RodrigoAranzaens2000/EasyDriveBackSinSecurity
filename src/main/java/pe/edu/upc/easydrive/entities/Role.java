@@ -1,5 +1,7 @@
 package pe.edu.upc.easydrive.entities;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
 import java.io.Serializable;
@@ -21,13 +23,6 @@ public class Role implements Serializable {
 
     //GETTERS AND SETTERES
 
-    public Users getUser() {
-        return user;
-    }
-
-    public void setUser(Users user) {
-        this.user = user;
-    }
 
     public Long getId() {
         return id;
@@ -45,4 +40,11 @@ public class Role implements Serializable {
         this.rol = rol;
     }
 
+    public Users getUser() {
+        return user;
+    }
+
+    public void setUser(Users user) {
+        this.user = user;
+    }
 }
