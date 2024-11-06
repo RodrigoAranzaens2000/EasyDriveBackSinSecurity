@@ -10,6 +10,7 @@ public class EscuelasDTO {
     private Promocion prom;
     private String Direccion;
     private String NumeroTelefono;
+    private String ImgEscuela;
 
     public int getIDEscuela() {
         return IDEscuela;
@@ -57,5 +58,13 @@ public class EscuelasDTO {
 
     public void setNumeroTelefono(String numeroTelefono) {
         NumeroTelefono = numeroTelefono;
+    }
+
+    public String getImgEscuela() {
+        return ImgEscuela;
+    }
+
+    public void setImgEscuela(String imgEscuela) {
+        ImgEscuela = imgEscuela;
     }
 }
