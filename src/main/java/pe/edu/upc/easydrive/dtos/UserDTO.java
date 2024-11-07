@@ -3,7 +3,7 @@ package pe.edu.upc.easydrive.dtos;
 import jakarta.persistence.Column;
 
 public class UserDTO {
-    private Long id;
+    private int id;
     private String username;
     private String password;
     private Boolean enabled;
@@ -15,11 +15,11 @@ public class UserDTO {
     private String Direccion;
     private String NumeroTelefono;
 
-    public Long getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(int id) {
         this.id = id;
     }
 

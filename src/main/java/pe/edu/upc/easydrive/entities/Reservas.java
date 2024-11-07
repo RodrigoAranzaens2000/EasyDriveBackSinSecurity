@@ -15,18 +15,18 @@ public class Reservas {
     @Column(name = "EstadoReserva", nullable = false, length = 50)
     private String EstadoReserva;
     @ManyToOne
-    @JoinColumn(name = "IDUsuario")
+    @JoinColumn(name = "id")
     private Users user;
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.PERSIST)
     @JoinColumn(name = "IDEscuela")
     private Escuelas esc;
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.PERSIST)
     @JoinColumn(name = "IDCentro")
     private CentrosMedicos centros;
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.PERSIST)
     @JoinColumn(name = "IDServicio")
     private Servicio ser;
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.PERSIST)
     @JoinColumn(name = "IDPromocion")
     private Promocion prom ;
 
