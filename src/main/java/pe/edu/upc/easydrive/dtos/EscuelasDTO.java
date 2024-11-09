@@ -7,7 +7,6 @@ public class EscuelasDTO {
     private int IDEscuela;
     private String nombre;
     private Long Ruc;
-    private Promocion prom;
     private String Direccion;
     private String NumeroTelefono;
     private String ImgEscuela;
@@ -34,14 +33,6 @@ public class EscuelasDTO {
 
     public void setRuc(Long ruc) {
         Ruc = ruc;
-    }
-
-    public Promocion getProm() {
-        return prom;
-    }
-
-    public void setProm(Promocion prom) {
-        this.prom = prom;
     }
 
     public String getDireccion() {

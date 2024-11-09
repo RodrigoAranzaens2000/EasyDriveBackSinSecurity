@@ -17,16 +17,16 @@ public class Reservas {
     @ManyToOne
     @JoinColumn(name = "id")
     private Users user;
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.PERSIST)
     @JoinColumn(name = "IDEscuela")
     private Escuelas esc;
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.PERSIST)
     @JoinColumn(name = "IDCentro")
     private CentrosMedicos centros;
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.PERSIST)
     @JoinColumn(name = "IDServicio")
     private Servicio ser;
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.PERSIST)
     @JoinColumn(name = "IDPromocion")
     private Promocion prom ;
 

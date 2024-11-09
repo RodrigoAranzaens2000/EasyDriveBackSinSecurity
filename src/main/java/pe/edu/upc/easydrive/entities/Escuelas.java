@@ -18,21 +18,17 @@ public class Escuelas {
     private String Direccion;
     @Column(name = "NumeroTelefono" , nullable = false , length = 30)
     private String NumeroTelefono;
-    @ManyToOne
-    @JoinColumn
-    private Promocion prom;
 
     public Escuelas() {
     }
 
-    public Escuelas(int IDEscuela, String nombre, Long ruc, String imgEscuela, String direccion, String numeroTelefono, Promocion prom) {
+    public Escuelas(int IDEscuela, String nombre, Long ruc, String imgEscuela, String direccion, String numeroTelefono) {
         this.IDEscuela = IDEscuela;
         this.nombre = nombre;
         Ruc = ruc;
         ImgEscuela = imgEscuela;
         this.Direccion = direccion;
         NumeroTelefono = numeroTelefono;
-        this.prom = prom;
     }
 
     public int getIDEscuela() {
@@ -51,14 +47,6 @@ public class Escuelas {
         this.nombre = nombre;
     }
 
-    public Long getRuc() {
-        return Ruc;
-    }
-
-    public void setRuc(Long ruc) {
-        Ruc = ruc;
-    }
-
     public String getImgEscuela() {
         return ImgEscuela;
     }
@@ -67,12 +55,12 @@ public class Escuelas {
         ImgEscuela = imgEscuela;
     }
 
-    public String getDireccion() {
-        return Direccion;
+    public Long getRuc() {
+        return Ruc;
     }
 
-    public void setDireccion(String direccion) {
-        Direccion = direccion;
+    public void setRuc(Long ruc) {
+        Ruc = ruc;
     }
 
     public String getNumeroTelefono() {
@@ -83,11 +71,11 @@ public class Escuelas {
         NumeroTelefono = numeroTelefono;
     }
 
-    public Promocion getProm() {
-        return prom;
+    public String getDireccion() {
+        return Direccion;
     }
 
-    public void setProm(Promocion prom) {
-        this.prom = prom;
+    public void setDireccion(String direccion) {
+        Direccion = direccion;
     }
 }
