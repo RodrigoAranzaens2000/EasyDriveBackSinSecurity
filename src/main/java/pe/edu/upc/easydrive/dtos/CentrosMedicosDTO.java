@@ -7,7 +7,7 @@ public class CentrosMedicosDTO {
     private String Nombre;
     private long RUC;
     private String ImgCentro;
-    private String Direccion;
+    private String direccion;
     private String NumeroTelefono;
 
     public int getIDCentro() {
@@ -43,11 +43,11 @@ public class CentrosMedicosDTO {
     }
 
     public String getDireccion() {
-        return Direccion;
+        return direccion;
     }
 
     public void setDireccion(String direccion) {
-        Direccion = direccion;
+        this.direccion = direccion;
     }
 
     public String getNumeroTelefono() {

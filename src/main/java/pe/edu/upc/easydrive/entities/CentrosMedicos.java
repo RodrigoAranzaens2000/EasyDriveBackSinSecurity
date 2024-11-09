@@ -14,23 +14,24 @@ public class CentrosMedicos {
     private long RUC;
     @Column(name = "ImgCentro",length = 255)
     private String ImgCentro;
-    @Column(name = "Direccion" , nullable = false , length = 500)
-    private String Direccion;
+    @Column(name = "direccion" , nullable = false , length = 500)
+    private String direccion;
     @Column(name = "NumeroTelefono" , nullable = false , length = 30)
     private String NumeroTelefono;
 /**/
     public CentrosMedicos() {
     }
 
+
     public CentrosMedicos(int IDCentro, String nombre, long RUC, String imgCentro, String direccion, String numeroTelefono) {
         this.IDCentro = IDCentro;
         Nombre = nombre;
         this.RUC = RUC;
         ImgCentro = imgCentro;
-        Direccion = direccion;
+        this.direccion = direccion;
         NumeroTelefono = numeroTelefono;
     }
-/**/
+
     public int getIDCentro() {
         return IDCentro;
     }
@@ -64,11 +65,11 @@ public class CentrosMedicos {
     }
 
     public String getDireccion() {
-        return Direccion;
+        return direccion;
     }
 
     public void setDireccion(String direccion) {
-        Direccion = direccion;
+        this.direccion = direccion;
     }
 
     public String getNumeroTelefono() {

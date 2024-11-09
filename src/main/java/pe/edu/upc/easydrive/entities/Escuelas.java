@@ -30,7 +30,7 @@ public class Escuelas {
         this.nombre = nombre;
         Ruc = ruc;
         ImgEscuela = imgEscuela;
-        Direccion = direccion;
+        this.Direccion = direccion;
         NumeroTelefono = numeroTelefono;
         this.prom = prom;
     }
