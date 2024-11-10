@@ -20,9 +20,7 @@ public class ReservasServiceImplement implements IReservasService {
     }
 
     @Override
-    public void insert(Reservas res) {
-        rR.save(res);
-    }
+    public void insert(Reservas res) {rR.save(res);}
 
     @Override
     public Reservas listId(int id) {
