@@ -6,8 +6,8 @@ import java.time.LocalDate;
 
 public class ReservasDTO {
     private int IDReserva;
-    private LocalDate FechaReserva;
-    private String EstadoReserva;
+    private LocalDate fechaReserva;
+    private String estadoReserva;
     private Users user;
     private Escuelas esc;
     private CentrosMedicos centros;
@@ -23,19 +23,19 @@ public class ReservasDTO {
     }
 
     public LocalDate getFechaReserva() {
-        return FechaReserva;
+        return fechaReserva;
     }
 
     public void setFechaReserva(LocalDate fechaReserva) {
-        FechaReserva = fechaReserva;
+        this.fechaReserva = fechaReserva;
     }
 
     public String getEstadoReserva() {
-        return EstadoReserva;
+        return estadoReserva;
     }
 
     public void setEstadoReserva(String estadoReserva) {
-        EstadoReserva = estadoReserva;
+        this.estadoReserva = estadoReserva;
     }
 
     public Users getUser() {

@@ -38,11 +38,6 @@ public class ReservasServiceImplement implements IReservasService {
     }
 
     @Override
-    public List<Reservas> buscar(String nombre) {
-        return rR.buscar(nombre);
-    }
-
-    @Override
     public List<String[]> sumaService() {
         return rR.suma();
     }

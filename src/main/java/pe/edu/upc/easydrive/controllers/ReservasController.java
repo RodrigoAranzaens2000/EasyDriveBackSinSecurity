@@ -50,13 +50,6 @@ public class ReservasController {
         rS.update(r);
     }
 
-    @GetMapping("/busquedas")
-    public List<ReservasDTO> BuscarEjemlo(String n) {
-        return rS.buscar(n).stream().map(x -> {
-            ModelMapper m = new ModelMapper();
-            return m.map(x, ReservasDTO.class);
-        }).collect(Collectors.toList());
-    }
 
     @GetMapping("/suma")
     public List<SumaDTO> sumaTotal() {

@@ -10,33 +10,33 @@ public class Reservas {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int IDReserva;
-    @Column(name = "FechaReserva", nullable = false)
-    private LocalDate FechaReserva;
-    @Column(name = "EstadoReserva", nullable = false, length = 50)
-    private String EstadoReserva;
+    @Column(name = "fechaReserva" , nullable = false)
+    private LocalDate fechaReserva;
+    @Column(name = "estadoReserva" , nullable = false , length = 200)
+    private String estadoReserva;
     @ManyToOne
-    @JoinColumn(name = "id")
+    @JoinColumn(name = "id" )
     private Users user;
     @ManyToOne
     @JoinColumn(name = "IDEscuela")
     private Escuelas esc;
     @ManyToOne
-    @JoinColumn(name = "IDCentro")
+    @JoinColumn(name = "IDCentro" )
     private CentrosMedicos centros;
     @ManyToOne
     @JoinColumn(name = "IDServicio")
     private Servicio ser;
     @ManyToOne
-    @JoinColumn(name = "IDPromocion")
-    private Promocion prom ;
+    @JoinColumn(name = "IDPromocion" )
+    private Promocion prom;
 
     public Reservas() {
     }
 
-    public Reservas(int IDReserva, LocalDate fechaReserva, String estadoReserva, Users user, Escuelas esc, CentrosMedicos centros, Servicio ser , Promocion prom) {
+    public Reservas(int IDReserva, LocalDate fechaReserva, String estadoReserva, Users user, Escuelas esc, CentrosMedicos centros, Servicio ser, Promocion prom) {
         this.IDReserva = IDReserva;
-        this.FechaReserva = fechaReserva;
-        this.EstadoReserva = estadoReserva;
+        this.fechaReserva = fechaReserva;
+        this.estadoReserva = estadoReserva;
         this.user = user;
         this.esc = esc;
         this.centros = centros;
@@ -53,19 +53,19 @@ public class Reservas {
     }
 
     public LocalDate getFechaReserva() {
-        return FechaReserva;
+        return fechaReserva;
     }
 
     public void setFechaReserva(LocalDate fechaReserva) {
-        FechaReserva = fechaReserva;
+        this.fechaReserva = fechaReserva;
     }
 
     public String getEstadoReserva() {
-        return EstadoReserva;
+        return estadoReserva;
     }
 
     public void setEstadoReserva(String estadoReserva) {
-        EstadoReserva = estadoReserva;
+        this.estadoReserva = estadoReserva;
     }
 
     public Users getUser() {

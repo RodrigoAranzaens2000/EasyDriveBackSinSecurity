@@ -10,9 +10,7 @@ import java.util.List;
 
 @Repository
 public interface IReservasRepository extends JpaRepository<Reservas, Integer> {
-    ///HUB: Buscar reservas por su estado
-    @Query("Select r from Reservas r where r.EstadoReserva like %:nombre%")
-    public List<Reservas> buscar(@Param("nombre") String nombre);
+
 
     ///Sumar las ganancias de servicios por escuelas
     @Query(value = "Select e.nombre , SUM(s.precio)\n" +

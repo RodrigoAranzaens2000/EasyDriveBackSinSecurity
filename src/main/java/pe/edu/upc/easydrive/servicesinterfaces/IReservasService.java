@@ -15,8 +15,6 @@ public interface IReservasService {
 
     public void update(Reservas res);
 
-    public List<Reservas> buscar(String nombre);
-
     public List<String[]>sumaService();
 
     public List<String[]>cantidadService();
