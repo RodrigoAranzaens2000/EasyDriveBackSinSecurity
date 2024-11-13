@@ -15,7 +15,7 @@ public class Reservas {
     @Column(name = "estadoReserva" , nullable = false , length = 200)
     private String estadoReserva;
     @ManyToOne
-    @JoinColumn(name = "id" )
+    @JoinColumn(name = "IDUsuario" )
     private Users user;
     @ManyToOne
     @JoinColumn(name = "IDEscuela")
