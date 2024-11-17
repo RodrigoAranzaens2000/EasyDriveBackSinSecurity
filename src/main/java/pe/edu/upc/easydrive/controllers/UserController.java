@@ -2,6 +2,7 @@ package pe.edu.upc.easydrive.controllers;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 import pe.edu.upc.easydrive.dtos.UserDTO;
 import pe.edu.upc.easydrive.entities.Users;
@@ -31,6 +32,7 @@ public class UserController {
     }
 
     @DeleteMapping("/{id}")
+    @PreAuthorize("hasAuthority('ADMINISTRADOR')")
     public void eliminar(@PathVariable("id") Long id) {
         uS.delete(id);
     }

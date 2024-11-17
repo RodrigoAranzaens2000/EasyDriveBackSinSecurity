@@ -2,6 +2,7 @@ package pe.edu.upc.easydrive.controllers;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 import pe.edu.upc.easydrive.dtos.ContarNotificacionesDTO;
 import pe.edu.upc.easydrive.dtos.NotificacionesDTO;
@@ -40,11 +41,13 @@ public class NotificacionesController {
     }
 
     @DeleteMapping("/{id}")
+    @PreAuthorize("hasAuthority('ADMINISTRADOR')")
     public void eliminar(@PathVariable("id") Integer id) {
         nS.delete(id);
     }
 
     @PutMapping
+    @PreAuthorize("hasAuthority('ADMINISTRADOR')")
     public void modificar(@RequestBody NotificacionesDTO dto) {
         ModelMapper m = new ModelMapper();
         Notificaciones n = m.map(dto, Notificaciones.class);
